@@ -1,0 +1,25 @@
+from microbit import *
+import neopixel
+
+# --- LED setup ---
+# Just 1 addressable RGB LED for now (testing stage)
+np = neopixel.NeoPixel(pin1, 1)
+
+GREEN = (0, 40, 0)   # available
+RED = (40, 0, 0)     # occupied
+
+# --- Switch setup ---
+# 1 Grove-style button module (G, V, S pins)
+# Wired: G -> G row, V -> V row, S -> S row, on pin 2
+button = pin2
+
+display.show(Image.HAPPY)
+sleep(1000)
+display.off()   # releases pins 3,4,6,7,9,10 (shared with the LED display)
+
+while True:
+		button.set_pull(button.PULL_UP)
+    pressed = button.read_digital() == 0   # 0 = pressed (Grove button module)
+    np[0] = RED if pressed else GREEN
+    np.show()
+    sleep(100)
