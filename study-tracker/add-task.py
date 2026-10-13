@@ -19,3 +19,5 @@ def add_task():
   desc = input("Enter description of task: ")
 
   date = input("Enter due date of task (DD-MM-YY): ")
+
+  tasks[name] = [f"Priority: {priority}", f"Due date: {date}", f"Description: {desc}"]
