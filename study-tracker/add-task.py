@@ -20,4 +20,13 @@ def add_task():
 
   date = input("Enter due date of task (DD-MM-YY): ")
 
-  tasks[name] = [f"Priority: {priority}", f"Due date: {date}", f"Description: {desc}"]
+  while True:
+    status = input("Enter status of task (Completed/Incomplete): ").lower()
+    if status != "completed" or status != "incomplete":
+      print("Incorrect input for status.")
+      continue
+    else:
+      break
+
+  tasks[name] = [f"Priority: {priority}", f"Due date: {date}", f"Description: {desc}", f"Status : {status}"]
+  return f" Task: {view_name}. \n Status: {tasks[view_name[3]]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}"
