@@ -9,5 +9,4 @@ def view_task():
     else:
       break
 
-  return f" Task: {view_name}. \n Status: {tasks[view_name[3]]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}"
-  
+  print(f" Task: {view_name}. \n Status: {tasks[view_name][3]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}")
