@@ -6,7 +6,7 @@ def status_task():
       continue
     else:
       break
-  
+
   while True:
     change = input("Would you like to change the task status (yes/no): ").lower()
     if change != "yes" or change != "no":
@@ -19,5 +19,5 @@ def status_task():
       tasks[status_name][3] == "completed"
     else:
       tasks[status_name][3] == "incomplete"
-  return f" Task: {view_name}. \n Status: {tasks[view_name[3]]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}"
-    
+  print(f" Task: {view_name}. \n Status: {tasks[view_name][3]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}")
+
