@@ -29,5 +29,6 @@ def add_task():
       break
 
   tasks[name] = [f"Priority: {priority}", f"Due date: {date}", f"Description: {desc}", f"Status : {status}"]
+  save_task()
   
   print(f" Task: {name}. \n Status: {status}. \n Priority: {priority}. \n Due data: {date}. \n Description: {desc}")
