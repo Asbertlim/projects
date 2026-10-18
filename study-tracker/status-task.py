@@ -16,8 +16,8 @@ def status_task():
       break
   if change == "yes":
     if tasks[status_name][3] == "incomplete":
-      tasks[status_name][3] == "completed"
+      tasks[status_name][3] = "completed"
     else:
-      tasks[status_name][3] == "incomplete"
+      tasks[status_name][3] = "incomplete"
   print(f" Task: {view_name}. \n Status: {tasks[view_name][3]}. \n Priority: {tasks[view_name][0]}. \n Due data: {tasks[view_name][1]}. \n Description: {tasks[view_name][2]}")
 
