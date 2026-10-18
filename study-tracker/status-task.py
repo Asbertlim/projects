@@ -9,7 +9,7 @@ def status_task():
 
   while True:
     change = input("Would you like to change the task status (yes/no): ").lower()
-    if change != "yes" or change != "no":
+    if change not in ("yes", "no"):
       print("Please indicate correctly. Input should be 'yes' or 'no'. ")
       continue
     else:
