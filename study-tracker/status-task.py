@@ -15,7 +15,7 @@ def status_task():
     else:
       break
   if change == "yes":
-    if tasks[status_name][3] == "incomplete":
+    if tasks[status_name][3] = "incomplete":
       tasks[status_name][3] = "completed"
     else:
       tasks[status_name][3] = "incomplete"
