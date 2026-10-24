@@ -4,6 +4,7 @@
 import json
 import os
 from datetime import datetime
+from supabase import create_client
 
 import streamlit as st
 
@@ -16,6 +17,12 @@ st.set_page_config(
     page_icon="📚",
     layout="centered"
 )
+# Connect to Supabase for this user's app session
+if "supabase" not in st.session_state:
+    st.session_state.supabase = create_client(
+        st.secrets["SUPABASE_URL"],
+        st.secrets["SUPABASE_KEY"]
+    )
 
 DATA_FILE = "tasks.json"
 
