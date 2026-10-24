@@ -85,12 +85,8 @@ if not st.session_state.logged_in:
                             "Please try again."
                         )
 
-            except Exception:
-                st.error(
-                    "Authentication failed. Check your details and try "
-                    "again. If you registered recently, check whether "
-                    "email confirmation is required."
-                )
+            except Exception as e:
+                st.error(f"Authentication failed: {e}")
 
 else:
     st.success(
