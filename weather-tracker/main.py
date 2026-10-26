@@ -115,7 +115,7 @@ def get_weather_for_city(city):
     output = {
         "city": city_info["name"],
         "country": city_info["country"],
-        "temperature": city_info["temperature"],
+        "temperature": weather_info["temperature"],
         "apparent_temperature": weather_info["apparent_temperature"],
         "humidity": weather_info["humidity"],
         "condition": condition,
