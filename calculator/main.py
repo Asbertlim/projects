@@ -1,19 +1,19 @@
 import streamlit as st
 
-st.set_page_config(page_title=“My Calculator”, page_icon=“🧮”)
+st.set_page_config(page_title="My Calculator", page_icon="🧮")
 
-st.title(“🧮 My Calculator”)
-st.write(“Perform basic mathematical operations!”)
+st.title("🧮 My Calculator")
+st.write("Perform basic mathematical operations!")
 
-num1 = st.number_input(“Enter first number:”, value=0.0)
-num2 = st.number_input(“Enter second number:”, value=0.0)
+num1 = st.number_input("Enter first number:", value=0.0)
+num2 = st.number_input("Enter second number:", value=0.0)
 
 choice = st.selectbox(
-“Select an operation:”,
-[“Addition”, “Subtraction”, “Multiplication”, “Division”, “Modulo”]
+"Select an operation:",
+["Addition", "Subtraction", "Multiplication", "Division", "Modulo"]
 )
 
-if st.button(“Calculate”):
+if st.button("Calculate"):
 
   if choice == "Addition":
       result = num1 + num2
