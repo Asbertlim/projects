@@ -35,8 +35,6 @@ def get_coordinates(city):
 
   return city_info
 
-print(get_coordinates("Medan"))
-
 def get_current_weather(latitude, longitude):
   params = {
     "latitude": latitude,
@@ -117,9 +115,11 @@ def get_weather_for_city(city):
     output = {
         "city": city_info["name"],
         "country": city_info["country"],
+        "temperature": city_info["temperature"],
         "apparent_temperature": weather_info["apparent_temperature"],
         "humidity": weather_info["humidity"],
-        "condition": condition
+        "condition": condition,
+        "time": weather_info["time"]
     }
 
     return output
