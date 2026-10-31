@@ -13,6 +13,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y
 )
 
+
 model_tree = DecisionTreeClassifier(max_depth=3, random_state=42)
 model_tree.fit(X_train, y_train)
 pred_tree = model_tree.predict(X_test)
@@ -23,5 +24,19 @@ model_clas.fit(X_train, y_train)
 pred_clas = model_clas.predict(X_test)
 acc_clas = accuracy_score(y_test, pred_clas)
 
-print("Tree Accuracy:", acc_tree)
-print("Logistic Accuracy:", acc_clas)
+
+user_study = int(input("Enter estimated study hours in one day: "))
+user_atd = int(input("Enter estimated percentage of school attendance: "))
+user_scr = int(input("Enter estimated previous average score in percentage: "))
+user_asg = int(input("Enter estimated percentage of assignment done: "))
+user_sleep = int(input("Enter estimated sleep hours: "))
+
+user_test = [user_study, user_atd, user_scr, user_asg, user_sleep]
+
+
+if acc_tree > acc_clas:
+  prediction = model_tree.predict(user_test)
+else:
+  prediction = model_clas.predict(user_test)
+
+print(prediction)
