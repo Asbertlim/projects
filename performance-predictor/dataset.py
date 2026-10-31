@@ -13,6 +13,7 @@ X = df[[
     "study_hours",
     "attendance",
     "previous_scores",
+    "assignment",
     "sleep_hours"
     ]]
 y = [0, 0, 0, 0, 1, 0, 1, 1, 1, 1]
