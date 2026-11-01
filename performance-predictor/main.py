@@ -31,7 +31,13 @@ user_scr = int(input("Enter estimated previous average score in percentage: "))
 user_asg = int(input("Enter estimated percentage of assignment done: "))
 user_sleep = int(input("Enter estimated sleep hours: "))
 
-user_test = [user_study, user_atd, user_scr, user_asg, user_sleep]
+user_test = pd.DataFrame([{
+    "study_hours": user_study,
+    "attendance": user_atd,
+    "previous_scores": user_scr,
+    "assignment": user_asg,
+    "sleep_hours": user_sleep
+}])
 
 
 if acc_tree > acc_clas:
@@ -39,4 +45,9 @@ if acc_tree > acc_clas:
 else:
   prediction = model_clas.predict(user_test)
 
-print(prediction)
+print()
+
+if prediction == 0:
+  print("You are less likely to survive next year.")
+else:
+  print("You will survive next year.")
