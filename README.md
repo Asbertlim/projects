@@ -6,3 +6,4 @@ External links:
 
 - study-tracker: https://projects-tlg33lypbhfp2ngw8aywqb.streamlit.app/
 - live_weather-tracker: https://projects-fwk6bhhwggxy4obmcmx7ii.streamlit.app/
+- EduPredict: https://projects-mzwkgusqe9d3pk2uhtmfed.streamlit.app/
