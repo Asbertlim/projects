@@ -98,10 +98,11 @@ model, accuracy, report = train_model()
 
 st.title("🎓 EduPredict")
 
-st.subheader("Student Performance Prediction")
+st.subheader("Student Performance Predictor")
 
 st.write(
-    "Enter the student's information below "
+    "Welcome to EduPredict."
+    "To proceed, please enter some information below regarding yourself "
     "to receive a predicted performance category."
 )
 
@@ -197,6 +198,7 @@ if submitted:
         "This is an educational prediction based on "
         "a small synthetic dataset, not a reliable "
         "assessment of an actual student's ability."
+        "Do not worry too much or feel anxious as this app is just a mini project."
     )
 
 
