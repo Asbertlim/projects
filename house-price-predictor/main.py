@@ -52,7 +52,7 @@ print("R2 Score:", r2_linear)
 # Random Forest
 model_random = RandomForestRegressor(
     n_estimators=100,
-    max_depth=None,
+    max_depth=10,
     random_state=42
 )
 
@@ -69,7 +69,7 @@ print("R2 Score:", r2_random)
 model_boosting = GradientBoostingRegressor(
     n_estimators=100,
     learning_rate=0.01,
-    max_depth=None,
+    max_depth=10,
     random_state=42
 )
 
